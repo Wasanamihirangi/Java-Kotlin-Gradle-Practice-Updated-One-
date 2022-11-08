@@ -22,6 +22,7 @@ public class Trade {
     public String nestedTags = "";
 
 
+
     public List<List<String>> extractTrade = new ArrayList();
 
     {
@@ -48,7 +49,7 @@ public class Trade {
 
                 seller = importFile.lines.get(i).substring(65, 69);
 
-                comment = importFile.lines.get(i).substring(69).replaceAll("[^a-zA-Z0-9]", " ");;
+                comment = importFile.lines.get(i).substring(69).replaceAll("[^a-zA-Z0-9]", " ");
 
 
                 List<String> tempTrade = new ArrayList();
@@ -93,6 +94,7 @@ public class Trade {
                 buyer = importFile.lines.get(i).substring(68, 72);
 
                 seller = importFile.lines.get(i).substring(72, 76);
+                comment = "";
 
                 nestedTags = importFile.lines.get(i).substring(76);
 
