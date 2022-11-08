@@ -28,6 +28,7 @@ public class Trade {
         for (int i = 0; i < importFile.lines.size(); i++) {
             if (importFile.lines.get(i).substring(0, 5).equals("TRADE")) {
                 tag = importFile.lines.get(i).substring(0, 5);
+                version = "";
 
                 String dtt = importFile.lines.get(i).substring(5, 22);
                 dateTime = dtt.substring(0, 4) + "/" + dtt.substring(4, 6) + "/" + dtt.substring(6, 8) + "-" + dtt.substring(8, 10) + ":" + dtt.substring(10, 12) + ":" + dtt.substring(12, 14) + "." + dtt.substring(14, 17);
