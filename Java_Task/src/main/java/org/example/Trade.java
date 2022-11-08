@@ -50,6 +50,8 @@ public class Trade {
                 seller = importFile.lines.get(i).substring(65, 69);
 
                 comment = importFile.lines.get(i).substring(69).replaceAll("[^a-zA-Z0-9]", " ");
+                nestedTags = "";
+
 
 
                 List<String> tempTrade = new ArrayList();
