@@ -41,7 +41,13 @@ public class Trade {
                 //DecimalFormat df = new DecimalFormat("0.00");
                 //df.setMaximumFractionDigits(2);
                 //price = Float.valueOf(df.format(Float.parseFloat(importFile.lines.get(i).substring(36, 50))));
-                price = importFile.lines.get(i).substring(35,36)+String.valueOf(Integer.parseInt(importFile.lines.get(i).substring(36,46)))+"."+importFile.lines.get(i).substring(46,50);
+                if(importFile.lines.get(i).substring(35,36).equals("+")){
+                    price = String.valueOf(Integer.parseInt(importFile.lines.get(i).substring(36,46)))+"."+importFile.lines.get(i).substring(46,50);
+
+                }else{
+                    price = importFile.lines.get(i).substring(35,36)+String.valueOf(Integer.parseInt(importFile.lines.get(i).substring(36,46)))+"."+importFile.lines.get(i).substring(46,50);
+                }
+
 
                 quantity = Integer.parseInt(importFile.lines.get(i).substring(51, 61));
 
@@ -90,7 +96,14 @@ public class Trade {
                 //DecimalFormat df = new DecimalFormat("0.00");
                 //df.setMaximumFractionDigits(2);
                 //price = Float.valueOf(df.format(Float.parseFloat(importFile.lines.get(i).substring(43, 57))));
-                price = importFile.lines.get(i).substring(42,43)+String.valueOf(Integer.parseInt(importFile.lines.get(i).substring(43,53)))+"."+importFile.lines.get(i).substring(53,57);
+                if(importFile.lines.get(i).substring(42,43).equals("+")){
+                    price = String.valueOf(Integer.parseInt(importFile.lines.get(i).substring(43,53)))+"."+importFile.lines.get(i).substring(53,57);
+
+                }else{
+                    price = importFile.lines.get(i).substring(42,43)+String.valueOf(Integer.parseInt(importFile.lines.get(i).substring(43,53)))+"."+importFile.lines.get(i).substring(53,57);
+                }
+
+                //price = importFile.lines.get(i).substring(42,43)+String.valueOf(Integer.parseInt(importFile.lines.get(i).substring(43,53)))+"."+importFile.lines.get(i).substring(53,57);
 
 
 
