@@ -64,7 +64,7 @@ public class Trade {
                 tempTrade.add(String.valueOf(quantity));
                 tempTrade.add(buyer);
                 tempTrade.add(seller);
-                tempTrade.add("'"+comment+"'");
+                tempTrade.add(comment);
                 tempTrade.add(nestedTags);
 
                 extractTrade.add(tempTrade);
