@@ -49,7 +49,7 @@ public class Trade {
 
                 seller = importFile.lines.get(i).substring(65, 69);
 
-                comment = "'"+importFile.lines.get(i).substring(69).replaceAll("[^a-zA-Z0-9\"?!]", " ")+"'";
+                comment = importFile.lines.get(i).substring(69).replaceAll("[^a-zA-Z0-9\"?!]", " ");
                 nestedTags = "";
 
 
@@ -64,7 +64,7 @@ public class Trade {
                 tempTrade.add(String.valueOf(quantity));
                 tempTrade.add(buyer);
                 tempTrade.add(seller);
-                tempTrade.add(comment);
+                tempTrade.add("'"+comment+"'");
                 tempTrade.add(nestedTags);
 
                 extractTrade.add(tempTrade);
