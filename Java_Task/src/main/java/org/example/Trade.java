@@ -88,7 +88,8 @@ public class Trade {
                 //DecimalFormat df = new DecimalFormat("0.00");
                 //df.setMaximumFractionDigits(2);
                 //price = Float.valueOf(df.format(Float.parseFloat(importFile.lines.get(i).substring(43, 57))));
-                price = String.valueOf(Integer.parseInt(importFile.lines.get(i).substring(43,53)))+"."+importFile.lines.get(i).substring(53,57);
+                price = importFile.lines.get(i).substring(42,43)+String.valueOf(Integer.parseInt(importFile.lines.get(i).substring(43,53)))+"."+importFile.lines.get(i).substring(53,57);
+
 
 
                 quantity = Integer.parseInt(importFile.lines.get(i).substring(58, 68));
